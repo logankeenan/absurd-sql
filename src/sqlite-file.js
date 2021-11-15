@@ -1,4 +1,4 @@
-import * as perf from 'perf-deets';
+import * as perf from 'perf-deets/noop';
 import { getPageSize, LOCK_TYPES } from './sqlite-util';
 
 function range(start, end, step) {

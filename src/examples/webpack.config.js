@@ -40,5 +40,6 @@ function getConfig(name, entry, html) {
 module.exports = [
   getConfig('bench', './bench/main.js', './bench/index.html'),
   getConfig('fts', './fts/main.js', './fts/index.html'),
-  getConfig('http', './http/main.js', './http/index.html')
+  getConfig('http', './http/main.js', './http/index.html'),
+  getConfig('http-async', './http-async/main.js', './http-async/index.html')
 ];
