@@ -55,9 +55,10 @@ export class FileOps {
 }
 
 export default class HttpAsyncBackend {
-    constructor(dbLocation, databaseBytes) {
+    constructor(dbLocation, databaseBytes, blockSize) {
         this.dbLocation = dbLocation;
         this.databaseBytes = databaseBytes;
+        this.blockSize = blockSize;
     }
 
     async init() {
@@ -70,7 +71,7 @@ export default class HttpAsyncBackend {
     createFile(filename) {
         let meta = {
             size: this.fileSize,
-            blockSize: 4096
+            blockSize: this.blockSize
         };
         this.meta = meta;
         const fileOps = new FileOps(filename, meta, this.databaseBytes);

@@ -21,7 +21,7 @@ export default class DatabaseBytes {
         this.blockSize = undefined;
     }
 
-    getBytes(positions, blockSize) {
+    getBytes(positions) {
         return positions.map((position) => {
             let bytePosition = this.bytePositions[position];
 

@@ -7,9 +7,9 @@ import DatabaseBytes from "./databaseBytes";
 const dbName = `http-async`;
 
 export default class AsyncHttpDatabase {
-    constructor(dbLocation) {
+    constructor(dbLocation, blockSize) {
         this.databaseBytes = new DatabaseBytes(dbLocation);
-        this.httpAsyncBackend = new HttpBackend(dbLocation, this.databaseBytes);
+        this.httpAsyncBackend = new HttpBackend(dbLocation, this.databaseBytes, blockSize);
     }
 
     async init() {
